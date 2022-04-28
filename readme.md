@@ -2,4 +2,4 @@
 
 Need to edit
 
-![alt text](https://github.com/swami-venkatesan/ssev4_dev/blob/master/data/images/Data%20Workflow.png?raw=true)
+![alt text](https://github.com/swami84/music_genre_classification/blob/master/data/images/last_fm_homepage.jpg)
