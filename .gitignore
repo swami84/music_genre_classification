@@ -1,4 +1,6 @@
 .ipynb_checkpoints/
 .idea/
-data/
+data/models/
+data/wav_files/
+data/song_mels/
 notebooks/.ipynb_checkpoints/
