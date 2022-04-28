@@ -60,6 +60,7 @@ features_convolution = np.reshape(normalized_melspectrogram,(X.shape[0],128, -1,
 
 ## References
 
-1. [Adiyansjah Alexander, A S Gunawan, Derwin Suhartono]: https://www.sciencedirect.com/science/article/pii/S187705091931064	"Music Recommender System Based on Genre using Convolutional Recurrent Neural Networks"
+[Music Recommender System Based on Genre using Convolutional Recurrent Neural Networks]: https://www.sciencedirect.com/science/article/pii/S1877050919310646
 
-   
+
+
