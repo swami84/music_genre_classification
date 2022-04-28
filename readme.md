@@ -36,7 +36,7 @@ elif song.shape[1] <2881:
 
 ### Scaling
 
-```
+```python
 scaler = MinMaxScaler(feature_range=(0, 1))
 melspectrogram=X.reshape(X.shape[0],-1)
 scaler.fit(melspectrogram)
@@ -52,5 +52,5 @@ features_convolution = np.reshape(normalized_melspectrogram,(X.shape[0],128, -1,
 
 
 
-[alt text](https://github.com/swami84/music_genre_classification/blob/master/data/images/model_comparison_norm_heatmap.jpg)
+![alt text](https://github.com/swami84/music_genre_classification/blob/master/data/images/model_comparison_norm_heatmap.jpg)
 
