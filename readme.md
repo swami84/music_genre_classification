@@ -60,16 +60,12 @@ features_convolution = np.reshape(normalized_melspectrogram,(X.shape[0],128, -1,
 
 ## References
 
-1. > Adiyansjah, Alexander A S Gunawan, Derwin Suhartono,
-   > Music Recommender System Based on Genre using Convolutional Recurrent Neural Networks,
-   > Procedia Computer Science,
-   > Volume 157,
-   > 2019,
-   > Pages 99-109,
-   > ISSN 1877-0509,
-   > https://doi.org/10.1016/j.procs.2019.08.146.
-   > (https://www.sciencedirect.com/science/article/pii/S1877050919310646)
-
+1. Adiyansjah, Alexander A S Gunawan, Derwin Suhartono,
+   Music Recommender System Based on Genre using Convolutional Recurrent Neural Networks,
+   Procedia Computer Science,
+   Volume 157, 2019, Pages 99-109, ISSN 1877-0509,
+   https://doi.org/10.1016/j.procs.2019.08.146.
+   (https://www.sciencedirect.com/science/article/pii/S1877050919310646)
 2. 
 
 
