@@ -53,6 +53,8 @@ CRNN Model
 
 ![alt text](https://github.com/swami84/music_genre_classification/blob/master/data/images/crnn_model.jpg)
 
+
+
 ## Results
 
 #### Accuracy
@@ -70,7 +72,17 @@ CRNN Model
 
 ### App
 
-To try out 
+To try out the app first install the packages as
+
+```python
+$ pip install -r requirements.txt
+```
+
+and then run 
+
+```python
+$ streamlit run app.py
+```
 
 ## References
 
