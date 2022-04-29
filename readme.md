@@ -45,6 +45,14 @@ features_convolution = np.reshape(normalized_melspectrogram,(X.shape[0],128, -1,
 
 ### Model Structures
 
+CNN Model
+
+![alt text](https://github.com/swami84/music_genre_classification/blob/master/data/images/cnn_model.jpg)
+
+CRNN Model
+
+![alt text](https://github.com/swami84/music_genre_classification/blob/master/data/images/crnn_model.jpg)
+
 ## Results
 
 #### Accuracy
@@ -57,6 +65,12 @@ features_convolution = np.reshape(normalized_melspectrogram,(X.shape[0],128, -1,
 #### Confusion Matrix
 
 ![alt text](https://github.com/swami84/music_genre_classification/blob/master/data/images/model_comparison_norm_heatmap.jpg)
+
+
+
+### App
+
+To try out 
 
 ## References
 
