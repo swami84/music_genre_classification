@@ -4,3 +4,4 @@ data/models/
 data/wav_files/
 data/song_mels/
 notebooks/.ipynb_checkpoints/
+data/test/
