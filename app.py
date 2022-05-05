@@ -11,7 +11,11 @@ import numpy as np
 from tensorflow import keras
 from keras.layers import Input,Conv2D, BatchNormalization, Dense, LSTM,MaxPooling2D
 from keras.layers import Reshape, Bidirectional, LSTM,Flatten, Dropout, Activation
+import time
 
+st.set_page_config(
+    page_title="Music Genre Classification", layout="centered"
+)
 
 def create_model(input_shape=(128, 2881, 1), num_classes=11, model_type='CNN', compile_model=False):
     model = keras.Sequential()
@@ -71,8 +75,7 @@ def download_clip(url, fname):
             return fname
     except Exception:
         return 'Error'
-    if os.path.isfile(fname):
-        return st.write('Song Downloaded')
+
 
 
 def generate_mels(fname):
@@ -106,13 +109,16 @@ def generate_mels(fname):
     return test_mels
 
 st.write("""# Music Genre Classifier""")
-st.write("##### A Convolutional Neural Network Classifier by Swami")
 
 os.makedirs('./data/test/', exist_ok=True)
-link = st.text_input("Paste the link for youtube song")
-if link is not None:
+link = st.text_input("Paste the link for youtube song \n Example: https://youtu.be/_Yhyp-_hX2s ")
+if len(link) >2:
     yt_download_fname = './data/test/test.wav'
     download_clip(link, yt_download_fname)
+    while not os.path.isfile(yt_download_fname):
+        with st.spinner('File Downloading...'):
+            time.sleep(5)
+    st.success('Done!')
     X_test = generate_mels(yt_download_fname)
     class_labels = ['Electronic', 'acoustic', 'classical', 'country', 'dance', 'hip-hop', 'jazz',
                     'metal', 'reggae', 'rnb', 'rock']

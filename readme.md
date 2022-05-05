@@ -13,9 +13,14 @@ Top 100 songs for each genre (total 17) were scraped from [last.fm](https://www.
 
 ### Data Wrangling
 
-
+- Indie, Blues, Alternative, 80s, British genres were removed
+- hardcore and metal genres were combined together as metal
+- hip-hop and rap genres were combined together as hip-hop
+- rock and punk genres were combined together as rock
 
 ### Feature Engineering
+
+Music genres have distinct signatures that can be often seen in their frequency response spectra. The frequency then converted into a non-linear scale (power of 2) is then used as the input feature for the deep learning models that we use further. Below we can see how the Mel spectrogram is different for different genres. 
 
 Mel Spectrogram
 
@@ -61,28 +66,42 @@ CRNN Model
 
 | Model | Accuracy |
 | ----- | -------- |
-| CNN   | 65.81%   |
-| CRNN  | 64.14%   |
+| CNN   | 68.49%   |
+| CRNN  | 63.37%   |
 
 #### Confusion Matrix
 
 ![alt text](https://github.com/swami84/music_genre_classification/blob/master/data/images/model_comparison_norm_heatmap.jpg)
 
-
+- CNN model out performs CNN model when comparing accuracy of predictions on test dataset
+- Both models are able to classify classical songs very accurately
+- CNN model is able to classify reggae genre with higher accuracy compared to CRNN model
+- Both models perform poorly (<50% accuracy) on predicting genre for songs belonging to Electronic and dance
+- CNN model also performs poorly on predicting genre for country songs
+- Both models show inter-class misclassification between Electronic - Dance and Rock - Metal genres
+  - Due to similar nature of songs/style between the genres
 
 ### App
 
 To try out the app first install the packages as
 
-```python
+```bash
 $ pip install -r requirements.txt
 ```
 
 and then run 
 
-```python
+```bash
 $ streamlit run app.py
 ```
+
+The app will open in the browser as shown below
+
+![alt text](https://github.com/swami84/music_genre_classification/blob/master/data/images/Streanlit_SS_Input.jpg)
+
+Input the youtube link for the song of interest. The app will take a few mins to download the song and process it. After that it should display a genre as shown below
+
+![alt text](https://github.com/swami84/music_genre_classification/blob/master/data/images/Streanlit_SS_Output.jpg)
 
 ## References
 
@@ -92,7 +111,12 @@ $ streamlit run app.py
    Volume 157, 2019, Pages 99-109, ISSN 1877-0509,
    https://doi.org/10.1016/j.procs.2019.08.146.
    (https://www.sciencedirect.com/science/article/pii/S1877050919310646)
-2. 
+2. @Music Genre Classifier{github,
+    author={https://github.com/ericzacharia},
+    title={[MusicGenreClassifier](https://github.com/ericzacharia/MusicGenreClassifier)},
+    year={2022},
+    url={https://github.com/ericzacharia/MusicGenreClassifier},
+   }
 
 
 
