@@ -20,7 +20,7 @@ Top 100 songs for each genre (total 17) were scraped from [last.fm](https://www.
 
 ### Feature Engineering
 
-Music genres have distinct signatures that can be often seen in their frequency response spectra. The frequency then converted into a non-linear scale (power of 2) is then used as the input feature for the deep learning models that we use further. Below we can see how the Mel spectrogram is different for different genres. 
+Music genres have distinct signatures that can be often seen in their frequency response spectra. This frequency response is then converted into a non-linear scale  which is fed as the input to the deep learning models used in this work. Below we can see how the Mel spectrogram is different for songs in different genres . 
 
 Mel Spectrogram
 
