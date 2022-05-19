@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Humans can identify genre by listening to the song very shortly. While most of us can agree with each other on our genre label for a given song/music but it becomes hard to explain on how our minds processed the song and came to the decision
+Humans can identify genre by listening to the song in a very short time. While most of us can agree with each other on our genre label for a given song/music but it becomes hard to explain on how our minds processed the song and came to the decision
 The even harder problem is to generalize our process and translate it to a machine-ready algorithm. Here I take an effort to classify top genres as listed on last.fm website by training 2 models - using Convolutional Neural Network (CNN) and Convolution Recurrent Neural Network(CRNN) models.
 
 ## Data
@@ -14,13 +14,13 @@ Top 100 songs for each genre (total 17) were scraped from [last.fm](https://www.
 ### Data Wrangling
 
 - Indie, Blues, Alternative, 80s, British genres were removed
-- hardcore and metal genres were combined together as metal
-- hip-hop and rap genres were combined together as hip-hop
-- rock and punk genres were combined together as rock
+- Hardcore and Metal genres were combined together as metal
+- Hip-Hop and Rap genres were combined together as hip-hop
+- Rock and Punk genres were combined together as rock
 
 ### Feature Engineering
 
-Music genres have distinct signatures that can be often seen in their frequency response spectra. This frequency response is then converted into a non-linear scale  which is fed as the input to the deep learning models used in this work. Below we can see how the Mel spectrogram is different for songs in different genres . 
+Songs of different genres have distinct signatures that can be often seen in their frequency response spectra. This frequency response is then converted into a non-linear scale known as Mel Spectrogram  which is fed as the input to the deep learning models used in this work. Below we can see how the Mel spectrogram is different for songs in different genres . 
 
 Mel Spectrogram
 
