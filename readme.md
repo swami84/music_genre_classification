@@ -86,6 +86,7 @@ CRNN Model
 To try out the app first install the packages as
 
 ```bash
+$ git clone https://github.com/swami84/music_genre_classification.git
 $ pip install -r requirements.txt
 ```
 
